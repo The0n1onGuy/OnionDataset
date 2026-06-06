@@ -5,8 +5,9 @@
   "customizations": {
     "codespaces": {
       "openFiles": [
-        "README.md",
-        "streamlit_app.py"
+        "README.md"
+        ,"streamlit_app.py"
+        ,"page1.py"
       ]
     },
     "vscode": {
