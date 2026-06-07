@@ -82,10 +82,9 @@ selected_columns = st.multiselect(
 
 # Search Bar for the catalog
 search_query = st.text_input("🔍 Buscar por Nombre de Producto, Categoría o Material...", "")
-
-# apply filters logic
-df_display = df.copy()
-
+with st.spinner('Actualizando el catálogo, procesando datos...'):
+    # apply filters logic
+    df_display = df.copy()
 
 # If user typed something in the search bar, filter the remaining dataframe
 if search_query:
