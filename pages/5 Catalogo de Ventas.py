@@ -75,13 +75,13 @@ all_columns = [FieldDateOFSale, FieldTimeOFSale, FieldStore, FieldTicket, FieldC
 
 # Column Selector (Multiselect)
 selected_columns = st.multiselect(
-    "Seleccione los campos (columnas) a mostrar en la tabla:",
+    "Seleccione los campos (columnas) a mostrar en la tabla:, Dejarlo en blanco seleccionara todos los campos",
     options=all_columns,
     default=[ FieldTimeOFSale, FieldStore, FieldTicket, FieldCategory,] # Empty by default means "Show All"
 )
 
 # Search Bar for the catalog
-search_query = st.text_input("🔍 Buscar por Nombre de Producto, Categoría o Tienda...", "")
+search_query = st.text_input(" Buscar por Nombre de Producto, Categoría o Tienda...", "")
 with st.spinner('Actualizando el catálogo, procesando datos...'):
     # apply filters logic
     df_display = df.copy()
