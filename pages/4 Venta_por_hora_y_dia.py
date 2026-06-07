@@ -13,10 +13,11 @@ tool_tiptxt = " Pase el cursor (hover) sobre las líneas, " \
 filter_tool_tiptxt = "Utilize estos filtros para cambiar el contenido dinamicamente de elementos " \
 " como categoria que son extensos puede escribir para encontrar su contenido mas rapido"
 
-custompage_description = "La funcion principal de la pagina " \
-"es proporcionar el flujo de clientes por medio de los tickets " \
-"asi como destarcar los unicos con los repetidos (Una compra con varios elementos) " \
-"y a su vez dar informacion de las horas pico filtrable"
+custompage_description = "Esta página " \
+"le ayudara a analizar el flujo de ingresos económicos a través del tiempo. " \
+"Le permite visualizar las tendencias de ventas diarias e identificar " \
+"claramente las horas más rentables del día (horas pico), facilitando " \
+"la toma de decisiones sobre horarios operativos y estrategias comerciales."
 
 FieldStore = 'Tienda'
 FieldTicket = 'Ticket'
