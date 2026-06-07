@@ -81,7 +81,7 @@ selected_columns = st.multiselect(
 )
 
 # Search Bar for the catalog
-search_query = st.text_input("🔍 Buscar por Nombre de Producto, Categoría o Material...", "")
+search_query = st.text_input("🔍 Buscar por Nombre de Producto, Categoría o Tienda...", "")
 with st.spinner('Actualizando el catálogo, procesando datos...'):
     # apply filters logic
     df_display = df.copy()
