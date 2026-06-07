@@ -131,9 +131,9 @@ st.divider()
 
 st.subheader("Rendimiento por Hora ", help=tool_tiptxt, divider="red")
 
-option_best= "Mayor Ingreso (Horas Pico)"
+option_best= "A Mayor Ingreso (Horas Pico)"
 option_24h= "Orden Cronológico (23h a 0h)"
-y_sort = '-x'
+y_sort = '-x' #Default in case something fails 
 
 sort_option = st.radio(
     "Ordenar vista por:",

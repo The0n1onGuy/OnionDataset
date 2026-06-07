@@ -124,15 +124,30 @@ st.divider()
 
 st.subheader("Análisis de Horas Pico (Tráfico por Hora)",help= tool_tiptxt, divider="red")
 
+option_best= "A Mayor Trafico (Horas Pico)"
+option_24h= "Orden Cronológico (23h a 0h)"
+y_sort = '-x' #Default in case something fails 
+
+sort_option = st.radio(
+    "Ordenar vista por:",
+    options=[option_best, option_24h],
+    horizontal=True
+)
+
 peak_time = df_filtered.groupby('Hora_Solo', as_index=False)[FieldTicket].nunique()
 peak_time = peak_time.dropna(subset=['Hora_Solo'])
+
+if sort_option == option_best:
+    y_sort = '-x'  # Peak Hours
+else:
+    y_sort = '-y'  # Use 24H format
 
 hour_graph = alt.Chart(peak_time).mark_bar(
     color='#1f77b4', 
     cornerRadiusEnd=3
 ).encode(
     x=alt.X(f'{FieldTicket}:Q', title='Cantidad de Tickets'),
-    y=alt.Y('Hora_Solo:O', title='Hora del Día (24h)', sort='-x'), 
+    y=alt.Y('Hora_Solo:O', title='Hora del Día (24h)', sort= y_sort), 
     tooltip=[alt.Tooltip('Hora_Solo:O', title='Hora'), alt.Tooltip(f'{FieldTicket}:Q', title='Tickets')]
 )
 
