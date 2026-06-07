@@ -77,7 +77,7 @@ all_columns = [FieldDateOFSale, FieldTimeOFSale, FieldStore, FieldTicket, FieldC
 selected_columns = st.multiselect(
     "Seleccione los campos (columnas) a mostrar en la tabla:",
     options=all_columns,
-    default=[] # Empty by default means "Show All"
+    default=[all_columns] # Empty by default means "Show All"
 )
 
 # Search Bar for the catalog
